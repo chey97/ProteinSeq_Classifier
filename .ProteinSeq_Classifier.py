@@ -62,3 +62,12 @@ plt.title('Count Distribution for Family Types')
 plt.ylabel('% of records')
 plt.savefig("plots/Count Distribution for Family Types.png")
 # plt.show()
+
+# Get classification types where counts are over 1000
+types = np.asarray(counts[(counts > 1000)].index)
+
+# Filter dataset's records for classification types > 1000
+data = model_f[model_f.classification.isin(types)] #  The isin method checks if each value in the column is contained in the list types
+
+print(types)
+print('%d is the number of records in the final filtered dataset' %data.shape[0])
