@@ -10,8 +10,10 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
 
 # importing the datasets
+
 df_char = pd.read_csv('data/pdb_data_no_dups.csv')
 df_seq = pd.read_csv('data/pdb_data_seq.csv')
+#print(df_seq.head())
 
 # With the data loaded into two seperate pandas dataframes, a filter, project, and a join must be performed to get the data together.
 # Filtering proteins only.
