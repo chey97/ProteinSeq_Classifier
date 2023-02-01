@@ -1,6 +1,6 @@
 Classifying a protein's family based on the protein sequence. - 
-Before running this model you must dowload the relevant datset 
-[DATA_SET](https://drive.google.com/drive/folders 1K_3DtAUWUvlC-b20Sg3SBnvdnSlZRee0?usp=sharing)
+Before running this model you must dowload the relevant datset
+[DATA_SET](https://drive.google.com/drive/folders/1K_3DtAUWUvlC-b20Sg3SBnvdnSlZRee0?usp=share_link)
 
 This is a protein data set retrieved from Research Collaboratory for Structural Bioinformatics (RCSB) Protein Data Bank (PDB).
 
