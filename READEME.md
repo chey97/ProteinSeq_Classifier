@@ -15,3 +15,14 @@ pdb_data_no_dups.csv contains protein meta data which includes details on protei
 data_seq.csv contains >400,000 protein structure sequences.
 
 Original Dataset can be dowloaded from [RCSB-PDB](https://www.rcsb.org)
+
+
+
+
+
+
+
+
+
+
+This program was build for academic purpose - DNASeq - Protein Sequence Classifier Copyright (C) 2023  Chethiya Galkaduwa

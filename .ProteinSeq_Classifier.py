@@ -1,3 +1,7 @@
+'''
+- This program was build for academic purpose - ProteinSeq - Protein Sequence Classifier Copyright (C) 2023  Chethiya Galkaduwa
+'''
+
 # importing libraries
 
 import pandas as pd 
@@ -13,8 +17,9 @@ from sklearn.metrics import accuracy_score, confusion_matrix, classification_rep
 
 df_char = pd.read_csv('data/pdb_data_no_dups.csv')
 df_seq = pd.read_csv('data/pdb_data_seq.csv')
-#print(df_seq.head())
+print(df_seq.head())
 
+# ------- Filter and Process Data -----------------------------------------------------------------------------------------------------------------
 # With the data loaded into two seperate pandas dataframes, a filter, project, and a join must be performed to get the data together.
 # Filtering proteins only.
 protein_char = df_char[df_char.macromoleculeType == 'Protein']
@@ -67,7 +72,16 @@ plt.savefig("plots/Count Distribution for Family Types.png")
 types = np.asarray(counts[(counts > 1000)].index)
 
 # Filter dataset's records for classification types > 1000
-data = model_f[model_f.classification.isin(types)] #  The isin method checks if each value in the column is contained in the list types
+data = model_f[model_f.classification.isin(types)] #  The 'isin' method checks if each value in the column is contained in the list types
 
 print(types)
 print('%d is the number of records in the final filtered dataset' %data.shape[0])
+
+# ------ Train Test Split ------------------------------------------------------------------------
+
+# Splot Data
+X_train, X_test, y_train, y_test = train_test_split(data['sequence'], data['classification'], test_size = 0.2, random_state = 1)
+
+
+# After splitting the data, it's important to utilize the CountVectorizer to create a dictionary composed from the training dataset. 
+
