@@ -9,7 +9,7 @@ import os
 import numpy as np
 from matplotlib import pyplot as plt
 import seaborn as sns 
-# from sklearn.feature_extraction.text import CounterVectorizer
+from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
 
@@ -66,7 +66,7 @@ sns.displot(data=df, x='classification', kind='ecdf', color = 'blue')
 plt.title('Count Distribution for Family Types')
 plt.ylabel('% of records')
 plt.savefig("plots/Count Distribution for Family Types.png")
-# plt.show()
+#plt.show()
 
 # Get classification types where counts are over 1000
 types = np.asarray(counts[(counts > 1000)].index)
@@ -75,13 +75,6 @@ types = np.asarray(counts[(counts > 1000)].index)
 data = model_f[model_f.classification.isin(types)] #  The 'isin' method checks if each value in the column is contained in the list types
 
 #print(types)
-#print('%d is the number of records in the final filtered dataset' %data.shape[0])
+print('%d is the number of records in the final filtered dataset' %data.shape[0])
 
-# ------ Train Test Split ------------------------------------------------------------------------
-
-# Splot Data
-X_train, X_test, y_train, y_test = train_test_split(data['sequence'], data['classification'], test_size = 0.2, random_state = 1)
-
-
-# After splitting the data, it's important to utilize the CountVectorizer to create a dictionary composed from the training dataset. 
 
