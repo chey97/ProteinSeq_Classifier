@@ -61,12 +61,12 @@ df.to_csv('Classification_family_groups.csv')
 if not os.path.exists("plots"):
     os.makedirs("plots")
 
-plt.figure()
-sns.displot(data=df, x='classification', kind='ecdf', color = 'blue')
-plt.title('Count Distribution for Family Types')
-plt.ylabel('% of records')
-plt.savefig("plots/Count Distribution for Family Types.png")
-#plt.show()
+# plt.figure()
+# sns.displot(data=df, x='classification', kind='ecdf', color = 'blue')
+# plt.title('Count Distribution for Family Types')
+# plt.ylabel('% of records')
+# plt.savefig("plots/Count Distribution for Family Types.png")
+# #plt.show()
 
 # Get classification types where counts are over 1000
 types = np.asarray(counts[(counts > 1000)].index)

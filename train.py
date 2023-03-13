@@ -20,4 +20,4 @@ X_train_df = vect.transform(X_train)
 X_test_df = vect.transform(X_test)
 
 # Print a few of the features
-print(vect.get_feature_names())
+print(vect.get_feature_names_out()[-20:])
