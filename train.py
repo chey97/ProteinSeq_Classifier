@@ -1,3 +1,6 @@
+'''
+- This program was build for academic purpose - ProteinSeq - Protein Sequence Classifier Copyright (C) 2023  Chethiya Galkaduwa
+'''
 
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.model_selection import train_test_split
