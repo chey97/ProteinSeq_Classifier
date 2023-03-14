@@ -31,6 +31,6 @@ print(types[38])
 
 
 #Print F1 score metrics
-report = (classification_report(y_test, NB_pred, target_names = types))
+report = classification_report(y_test, NB_pred, target_names=types, output_dict=True)
 df = pd.DataFrame(report).transpose()
-df.to_csv('Classification_Report.csv', index = True)
+df.to_csv('Classification_Report.csv', index=True)
