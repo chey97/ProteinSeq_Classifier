@@ -1,4 +1,6 @@
-Classifying a protein's family based on the protein sequence. - Before running this model you must dowload the relevant datset DATA_SET
+Classifying a protein's family based on the protein sequence. - 
+Before running this model you must dowload the relevant datset
+[DATA_SET](https://drive.google.com/drive/folders/1K_3DtAUWUvlC-b20Sg3SBnvdnSlZRee0?usp=share_link)
 
 This is a protein data set retrieved from Research Collaboratory for Structural Bioinformatics (RCSB) Protein Data Bank (PDB).
 
@@ -12,6 +14,15 @@ pdb_data_no_dups.csv contains protein meta data which includes details on protei
 
 data_seq.csv contains >400,000 protein structure sequences.
 
-Original Dataset can be dowloaded from RCSB-PDB
+Original Dataset can be dowloaded from [RCSB-PDB](https://www.rcsb.org)
 
-This program was build for academic purpose - DNASeq - Protein Sequence Classifier Copyright (C) 2023 Chethiya Galkaduwa
+
+
+
+
+
+
+
+
+
+This program was build for academic purpose - DNASeq - Protein Sequence Classifier Copyright (C) 2023  Chethiya Galkaduwa
