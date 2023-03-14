@@ -25,4 +25,4 @@ Original Dataset can be dowloaded from [RCSB-PDB](https://www.rcsb.org)
 
 
 
-This program was build for academic purpose - DNASeq - Protein Sequence Classifier Copyright (C) 2023  Chethiya Galkaduwa
+This modal was build for academic purpose - DNASeq - Protein Sequence Classifier Copyright (C) 2023  Chethiya Galkaduwa
