@@ -1,4 +1,8 @@
-Classifying a protein's family based on the protein sequence. - 
+
+Classifying a protein's family based on the protein sequence.
+
+1) Import Dataset
+
 Before running this model you must dowload the relevant datset
 [DATA_SET](https://drive.google.com/drive/folders/1K_3DtAUWUvlC-b20Sg3SBnvdnSlZRee0?usp=share_link)
 
@@ -16,13 +20,36 @@ data_seq.csv contains >400,000 protein structure sequences.
 
 Original Dataset can be dowloaded from [RCSB-PDB](https://www.rcsb.org)
 
+2) Filter and Process Data
+
+I found out that its better use CountVectorizer -- a feature extractor that is usually used with NLP machine learning models.
+The data is loaded into two seperate pandas dataframes and filtering ( filtering the datasets where the classification is equal to 'Protein', followed by removing all other variables other than structureId and sequence for the data_seq_csv, and structureId and classification in the no_dups dataset. ), projection, and a join is performed to get the data together.
+
+Since the data-set appears to be a wide distribution of counts for family types filter it out for having a certain amount of recordes that are of a specific family type.Filter out for 1,000 family types that will allow a machine learning model to learn a pattern for a specific class.
+
+3) Train Test Split
+
+After filtering the dataset, a split on the data to create a training and testing set must be performed. 
+After splitting the data, utilize the CountVectorizer to create a dictionary composed from the training dataset and it will extract individual characters or subsets of characters to gain features.
 
 
+4) Machine Learning Models
+
+Multinomial Naive Bayes approach works well for these types of count vectorized features. Adaboost was also used but the it appears that Naive Bayes model does better in classification than Adaboost model.
+
+5) 
+
+A visualization of a confusion matrix and a clasification report for the Navie Bayes prediction shows that the label index 3 being misclassified as index 38 quite a bit. Based on the names listed below, it makes sense for these two to be confused.
+
+![alt text](https://github.com/chey97/ProteinSeq_Classifier/blob/47242111421619c21bc7565cdbb50fc1cbfa70ad/plots/Heat%20Map.png)
 
 
+Reasons for Model Error
 
+Proteins in general can be a type of enzyme, or a signaling protein, structural, and various other choices. A lof of proteins tend to share very similar characteristics, as some proteins are meant to bind in similar regions as others. For example, a Hydrolase enzyme and a Hydrolase inhibitor protein are going to have similar structures as they will target very similar areas. This is reflected in the confusion matrix and heat map. Gene regulator proteins will have a similarity to RNA binding proteins, DNA binding proteins, as well as transcription proteins. The biggest thing to note as well, as the model only uses features of 4 amino acids at most. The possibility of utilizing amino acids of higher degree in theory should be able to create an even higher accuracy.
 
+Future Work
 
-
+There is definitely room for improvement for the model. Utilizing factors such as pH, molecular weight, and other components may be able to yield more information on family group. Furthermore, if possible, increase the length of the ngram_range to include more than just 4 characters to allow for higher interaction between the amino acids as reflected in reality
 
 This modal was build for academic purpose - DNASeq - Protein Sequence Classifier Copyright (C) 2023  Chethiya Galkaduwa
