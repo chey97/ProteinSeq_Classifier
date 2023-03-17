@@ -95,11 +95,11 @@ The relavent classification report :
 |weighted avg                           |0.7929027805102244 |0.7682970559759027|0.7741092058773669|55774.0           |
 |--------------------------------------------------------------------------------------------------------------------|
 
-Reasons for Model Error : 
+6) Reasons for Model Error : 
 
 Proteins in general can be a type of enzyme, or a signaling protein, structural, and various other choices. A lof of proteins tend to share very similar characteristics, as some proteins are meant to bind in similar regions as others. For example, a Hydrolase enzyme and a Hydrolase inhibitor protein are going to have similar structures as they will target very similar areas. This is reflected in the confusion matrix and heat map. Gene regulator proteins will have a similarity to RNA binding proteins, DNA binding proteins, as well as transcription proteins. The biggest thing to note as well, as the model only uses features of 4 amino acids at most. The possibility of utilizing amino acids of higher degree in theory should be able to create an even higher accuracy.
 
-Future Work : 
+7) Future Work : 
 
 There is definitely room for improvement for the model. Utilizing factors such as pH, molecular weight, and other components may be able to yield more information on family group. Furthermore, if possible, increase the length of the ngram_range to include more than just 4 characters to allow for higher interaction between the amino acids as reflected in reality
 
