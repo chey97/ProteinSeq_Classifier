@@ -1,4 +1,3 @@
-
 Classifying a protein's family based on the protein sequence.
 
 1) Import Dataset
@@ -104,3 +103,6 @@ Proteins in general can be a type of enzyme, or a signaling protein, structural,
 There is definitely room for improvement for the model. Utilizing factors such as pH, molecular weight, and other components may be able to yield more information on family group. Furthermore, if possible, increase the length of the ngram_range to include more than just 4 characters to allow for higher interaction between the amino acids as reflected in reality
 
 This modal was build for academic purpose - DNASeq - Protein Sequence Classifier Copyright (C) 2023  Chethiya Galkaduwa
+
+
+
